@@ -157,3 +157,4 @@
     @media (prefers-reduced-motion: reduce){ .reveal,.hero h1 .ln{opacity:1;transform:none;animation:none} .ticker .track,.logo img{animation:none} }
     #creators .card:last-child { grid-column: 1 / -1; }
     .hero h1 .ln, .hero h1 .j { background: var(--metal); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .services.four { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
