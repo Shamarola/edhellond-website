@@ -16,9 +16,7 @@
     <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
       <a href="/" class="logo"><img src="/assets/logo.png" alt="Edhellond"></a>
       <nav style="display:flex; align-items:center;">
-        <a href="/#services">Services</a>
-        <a href="/contact.html">Contact</a>
-        <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu(true)"><span></span><span></span><span></span></button>
+        <button class="menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
       </nav>
     </div>
   </header>
@@ -39,14 +37,25 @@
   </footer>
   <div class="backdrop" onclick="toggleMenu(false)"></div>
   <aside class="side-menu" aria-label="Menu">
-    <div class="top"><img src="/assets/logo.png" alt="Edhellond"><button class="menu-close" aria-label="Close menu" onclick="toggleMenu(false)">&times;</button></div>
+    <div class="top"><img src="/assets/logo.png" alt="Edhellond"><button class="menu-close" aria-label="Close menu" onclick="event.stopPropagation();toggleMenu(false)">&times;</button></div>
+    <a class="item" href="/#services">Services</a>
     <a class="item" href="/about.html">About us</a>
     <a class="item" href="/contact.html">Contact</a>
     <a class="item" href="/faq.html">FAQs</a>
   </aside>
   <script>
-    function toggleMenu(o){document.querySelector('.side-menu').classList.toggle('open',o);document.querySelector('.backdrop').classList.toggle('open',o);}
-    document.addEventListener('keydown',e=>{if(e.key==='Escape')toggleMenu(false);});
+    (function(){
+      var menu=document.querySelector('.side-menu'),bd=document.querySelector('.backdrop'),btn=document.querySelector('.menu-btn'),pinned=false,t;
+      function set(o){menu.classList.toggle('open',o);bd.classList.toggle('open',o&&pinned);}
+      function enter(){clearTimeout(t);if(!pinned)set(true);}
+      function leave(){if(pinned)return;t=setTimeout(function(){set(false);},250);}
+      window.toggleMenu=function(o){pinned=!!o;set(!!o);};
+      btn.addEventListener('mouseenter',enter);btn.addEventListener('mouseleave',leave);
+      menu.addEventListener('mouseenter',enter);menu.addEventListener('mouseleave',leave);
+      btn.addEventListener('click',function(e){e.stopPropagation();toggleMenu(true);});
+      document.addEventListener('click',function(e){if(pinned&&!menu.contains(e.target))toggleMenu(false);});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')toggleMenu(false);});
+    })();
   </script>
 </body>
 </html>
