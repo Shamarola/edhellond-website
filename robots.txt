@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://edhellond.com/sitemap.xml
