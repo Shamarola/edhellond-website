@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For creators — Edhellond</title>
+  <link rel="icon" href="/assets/logo.png">
+  <meta name="description" content="Edhellond helps with influencer marketing, social media management, and project development. From campaigns to custom builds.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&text=J&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=10">
+  <link rel="canonical" href="https://edhellond.com/creators.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Edhellond">
+  <meta property="og:title" content="Campaigns that move people. Projects that actually ship.">
+  <meta property="og:description" content="Edhellond runs influencer campaigns, builds projects, and gets local businesses online with websites, Google and socials. Bold. Passionate. Excellent.">
+  <meta property="og:url" content="https://edhellond.com/creators.html">
+  <meta property="og:image" content="https://edhellond.com/assets/share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@edhellondstudio">
+  <meta name="twitter:title" content="Campaigns that move people. Projects that actually ship.">
+  <meta name="twitter:description" content="Edhellond runs influencer campaigns, builds projects, and gets local businesses online with websites, Google and socials. Bold. Passionate. Excellent.">
+  <meta name="twitter:image" content="https://edhellond.com/assets/share.png">
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+      <a href="/" class="logo"><img src="/assets/logo.png" alt="Edhellond"></a>
+      <nav style="display:flex; align-items:center;">
+        <button class="menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page"><div class="container"><h1>For creators</h1></div></section>
+    <section id="creators">
+      <div class="container reveal">
+        <h2>For creators</h2>
+        <p class="sub">Grow bigger, get seen, get paid.</p>
+        <div class="services">
+          <div class="card"><h3>Brand deals</h3><p>We pitch you to brands that fit your audience, then negotiate the rate and the contract for you.</p></div>
+          <div class="card"><h3>Exposure</h3><p>Collabs, features, and cross-promos with other creators to get you in front of new audiences.</p></div>
+          <div class="card"><h3>Content strategy</h3><p>What to post, when, and why, built around your niche and the formats each platform rewards right now.</p></div>
+          <div class="card"><h3>Personal brand</h3><p>Your look, your bio, your story, and a media kit that makes brands take you seriously.</p></div>
+          <div class="card"><h3>Growth tracking</h3><p>We watch your numbers and tell you plainly what's working, so every month builds on the last.</p></div>
+          <div class="card"><h3>Management</h3><p>Inbox, scheduling, deadlines and deliverables. We handle the business side so you can create.</p></div>
+          <div class="card"><h3>Beyond social</h3><p>Merch, launches, websites and side projects, built with you from idea to live.</p></div>
+        </div>
+        <p class="closing">You make the content. We make sure the right people see it.</p>
+        <div class="center"><a href="#contact" class="btn">Grow with us</a></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="social"><a href="https://instagram.com/edhellond.studio" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="0.6" fill="currentColor"/></svg></a><a href="https://x.com/edhellondstudio" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3zm-1.08 16.2h1.7L7.4 4.73H5.58L16.67 19.2z"/></svg></a></div>
+      <p>© Edhellond. All rights reserved.</p>
+    </div>
+  </footer>
+  <div class="backdrop" onclick="toggleMenu(false)"></div>
+  <aside class="side-menu" aria-label="Menu">
+    <div class="top"><img src="/assets/logo.png" alt="Edhellond"><button class="menu-close" aria-label="Close menu" onclick="event.stopPropagation();toggleMenu(false)">&times;</button></div>
+    <a class="item" href="/services.html">Services</a>
+    <a class="item" href="/creators.html">Creators</a>
+    <a class="item" href="/how.html">How we work</a>
+    <a class="item" href="/about.html">About us</a>
+    <a class="item" href="/contact.html">Contact</a>
+    <a class="item" href="/faq.html">FAQs</a>
+  </aside>
+  <script>
+    (function(){
+      var menu=document.querySelector('.side-menu'),bd=document.querySelector('.backdrop'),btn=document.querySelector('.menu-btn'),pinned=false,t;
+      function set(o){menu.classList.toggle('open',o);bd.classList.toggle('open',o&&pinned);}
+      function enter(){clearTimeout(t);if(!pinned)set(true);}
+      function leave(){if(pinned)return;t=setTimeout(function(){set(false);},250);}
+      window.toggleMenu=function(o){pinned=!!o;set(!!o);};
+      btn.addEventListener('mouseenter',enter);btn.addEventListener('mouseleave',leave);
+      menu.addEventListener('mouseenter',enter);menu.addEventListener('mouseleave',leave);
+      btn.addEventListener('click',function(e){e.stopPropagation();toggleMenu(true);});
+      document.addEventListener('click',function(e){if(pinned&&!menu.contains(e.target))toggleMenu(false);});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')toggleMenu(false);});
+    })();
+  </script>
+  <script>
+    (function(){
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('.word').forEach(function(w){w.classList.add('on');});}});},{threshold:.2});
+      document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+    })();
+  </script>
+</body>
+</html>

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&text=J&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=8">
+  <link rel="stylesheet" href="/styles.css?v=10">
   <link rel="canonical" href="https://edhellond.com/services.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Edhellond">
@@ -47,6 +47,21 @@
         </div>
       </div>
     </section>
+    <section id="grow">
+      <div class="container reveal">
+        <h2>How we help you grow</h2>
+        <div class="services">
+          <div class="card"><h3>Reach</h3><p>We put you in front of the right audience through creators who already have their trust.</p></div>
+          <div class="card"><h3>Engagement</h3><p>Content that people actually stop for, share and comment on, directed so it's on-brand and built to perform.</p></div>
+          <div class="card"><h3>Credibility</h3><p>Your brand appears next to trusted voices, which makes your name recognizable and believable.</p></div>
+          <div class="card"><h3>Momentum</h3><p>No one-off posts. Campaigns run in phases that build on each other, from launch to follow-ups and long-term creator partnerships.</p></div>
+          <div class="card"><h3>Execution</h3><p>When growth needs something built, like a landing page, a launch, or a new product, we handle that too, so ideas don't stall.</p></div>
+          <div class="card"><h3>Clarity</h3><p>After each campaign you get a clear report of what worked, what didn't, and what to do next.</p></div>
+        </div>
+        <p class="closing">Growth isn't luck. It's the right people, the right content, and a plan that keeps moving.</p>
+      </div>
+    </section>
+
     <section id="digital-presence">
       <div class="container">
         <h2>Not online yet? We'll put you on the map.</h2>
@@ -77,6 +92,8 @@
   <aside class="side-menu" aria-label="Menu">
     <div class="top"><img src="/assets/logo.png" alt="Edhellond"><button class="menu-close" aria-label="Close menu" onclick="event.stopPropagation();toggleMenu(false)">&times;</button></div>
     <a class="item" href="/services.html">Services</a>
+    <a class="item" href="/creators.html">Creators</a>
+    <a class="item" href="/how.html">How we work</a>
     <a class="item" href="/about.html">About us</a>
     <a class="item" href="/contact.html">Contact</a>
     <a class="item" href="/faq.html">FAQs</a>
@@ -93,6 +110,12 @@
       btn.addEventListener('click',function(e){e.stopPropagation();toggleMenu(true);});
       document.addEventListener('click',function(e){if(pinned&&!menu.contains(e.target))toggleMenu(false);});
       document.addEventListener('keydown',function(e){if(e.key==='Escape')toggleMenu(false);});
+    })();
+  </script>
+  <script>
+    (function(){
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('.word').forEach(function(w){w.classList.add('on');});}});},{threshold:.2});
+      document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
     })();
   </script>
 </body>

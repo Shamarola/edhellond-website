@@ -170,3 +170,17 @@
     .cmp p { margin-bottom:10px; }
     .cmp .old, .cmp .old h3 { color:#6f757b; }
     .cmp .new, .cmp .new h3 { color:#f4f6f8; }
+    body { animation: pagein .4s ease both; }
+    @keyframes pagein { from { opacity:0; } to { opacity:1; } }
+    .teasers { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:24px; }
+    .teaser { display:block; text-decoration:none; border:1px solid var(--border); padding:40px 32px; transition: border-color .4s, background .4s; }
+    .teaser:hover { border-color:#8a9096; background:var(--surface); }
+    .teaser h3 { font-weight:400; font-size:.9rem; letter-spacing:.25em; text-transform:uppercase; color:#f4f6f8; margin-bottom:14px; }
+    .teaser p { color:var(--muted); margin-bottom:28px; }
+    .teaser .go { font-size:.7rem; letter-spacing:.3em; text-transform:uppercase; color:#8a9096; }
+    .teaser .go i { font-style:normal; display:inline-block; transition: transform .4s; }
+    .teaser:hover .go i { transform: translateX(6px); }
+    .page + section { padding-top: 0; }
+    .teasers { grid-template-columns: repeat(4, 1fr); }
+    @media (max-width: 900px) { .teasers { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .teasers { grid-template-columns: 1fr; } }
