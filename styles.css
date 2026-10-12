@@ -158,3 +158,5 @@
     #creators .card:last-child { grid-column: 1 / -1; }
     .hero h1 .ln, .hero h1 .j { background: var(--metal); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .services.four { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .social a { border:0; padding:0; color:#8a9096; display:inline-flex; transition: color .3s, transform .3s; }
+    .social a:hover { color:#f4f6f8; transform: translateY(-2px); }
