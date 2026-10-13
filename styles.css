@@ -184,5 +184,3 @@
     .teasers { grid-template-columns: repeat(4, 1fr); }
     @media (max-width: 900px) { .teasers { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 520px) { .teasers { grid-template-columns: 1fr; } }
-    header .container { justify-content: space-between !important; }
-    header .logo { position: static; left: auto; top: auto; transform: none; }
