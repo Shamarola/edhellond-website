@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://edhellond.com/</loc></url>
-  <url><loc>https://edhellond.com/services.html</loc></url>
-  <url><loc>https://edhellond.com/about.html</loc></url>
-  <url><loc>https://edhellond.com/contact.html</loc></url>
-  <url><loc>https://edhellond.com/faq.html</loc></url>
-  <url><loc>https://edhellond.com/creators.html</loc></url>
-  <url><loc>https://edhellond.com/how.html</loc></url>
+  <url><loc>https://edhellond.com/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://edhellond.com/services</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://edhellond.com/about</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://edhellond.com/contact</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://edhellond.com/faq</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://edhellond.com/creators</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://edhellond.com/how</loc><lastmod>2026-11-16</lastmod></url>
 </urlset>

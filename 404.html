@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found | edhellond</title>
+  <link rel="icon" href="/assets/logo.png">
+  <meta name="description" content="That page is not on edhellond.com. Head home or email hello@edhellond.com.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=18">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Edhellond">
+  <meta property="og:title" content="Page not found | edhellond">
+  <meta property="og:description" content="That page is not on edhellond.com. Head home or email hello@edhellond.com.">
+  <meta property="og:url" content="https://edhellond.com/404">
+  <meta property="og:image" content="https://edhellond.com/assets/share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@edhellondstudio">
+  <meta name="twitter:title" content="Page not found | edhellond">
+  <meta name="twitter:description" content="That page is not on edhellond.com. Head home or email hello@edhellond.com.">
+  <meta name="twitter:image" content="https://edhellond.com/assets/share.png">
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<!--email_off-->
+  <a class="skip" href="#content">Skip to content</a>
+  <header>
+    <div class="container header-bar">
+      <a href="/" class="logo"><img src="/assets/logo.png" alt="Edhellond"></a>
+      <nav class="top-nav">
+        <div class="desk-nav">
+          <a href="/services">Services</a>
+          <a href="/creators">Creators</a>
+          <a href="/how">How we work</a>
+          <a href="/about">About us</a>
+          <a href="/contact">Contact</a>
+          <a href="/faq">FAQs</a>
+        </div>
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="page">
+      <div class="container">
+        <h1>Page not found</h1>
+        <div class="prose">
+          <p style="margin-bottom:40px">That page is not on this site. Go back to the homepage, or email us if you need a hand.</p>
+          <a href="/" class="btn">Back to home</a>
+          <p style="margin-top:24px;font-size:0.9rem">hello@edhellond.com</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="social"><a href="https://instagram.com/edhellond.studio" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="0.6" fill="currentColor"/></svg></a><a href="https://x.com/edhellondstudio" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3zm-1.08 16.2h1.7L7.4 4.73H5.58L16.67 19.2z"/></svg></a></div>
+      <p>© Edhellond. All rights reserved.</p>
+    </div>
+  </footer>
+  <div class="backdrop" onclick="toggleMenu(false)"></div>
+  <aside class="side-menu" aria-label="Menu">
+    <div class="top"><img src="/assets/logo.png" alt="Edhellond"><button class="menu-close" aria-label="Close menu" onclick="event.stopPropagation();toggleMenu(false)">&times;</button></div>
+    <a class="item" href="/services">Services</a>
+    <a class="item" href="/creators">Creators</a>
+    <a class="item" href="/how">How we work</a>
+    <a class="item" href="/about">About us</a>
+    <a class="item" href="/contact">Contact</a>
+    <a class="item" href="/faq">FAQs</a>
+  </aside>
+  <script>
+    (function(){
+      var menu=document.querySelector('.side-menu'),bd=document.querySelector('.backdrop'),btn=document.querySelector('.menu-btn'),pinned=false,t;
+      function set(o){menu.classList.toggle('open',o);bd.classList.toggle('open',o&&pinned);if(btn)btn.setAttribute('aria-expanded',o?'true':'false');}
+      function enter(){clearTimeout(t);if(!pinned)set(true);}
+      function leave(){if(pinned)return;t=setTimeout(function(){set(false);},250);}
+      window.toggleMenu=function(o){pinned=!!o;set(!!o);};
+      btn.addEventListener('mouseenter',enter);btn.addEventListener('mouseleave',leave);
+      menu.addEventListener('mouseenter',enter);menu.addEventListener('mouseleave',leave);
+      btn.addEventListener('click',function(e){e.stopPropagation();toggleMenu(true);});
+      document.addEventListener('click',function(e){if(pinned&&!menu.contains(e.target))toggleMenu(false);});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')toggleMenu(false);});
+    })();
+  </script>
+<!--/email_off-->
+</body>
+</html>
