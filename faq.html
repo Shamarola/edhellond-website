@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&text=J&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=17">
+  <link rel="stylesheet" href="/styles.css?v=18">
   <link rel="canonical" href="https://edhellond.com/faq.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Edhellond">
@@ -24,19 +24,29 @@
   <meta name="twitter:title" content="Campaigns that move people. Projects that actually ship.">
   <meta name="twitter:description" content="Edhellond runs influencer campaigns, builds projects, and gets local businesses online with websites, Google and socials. Bold. Passionate. Excellent.">
   <meta name="twitter:image" content="https://edhellond.com/assets/share.png">
+<script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
 <!--email_off-->
+  <a class="skip" href="#content">Skip to content</a>
   <header>
-    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+    <div class="container header-bar">
       <a href="/" class="logo"><img src="/assets/logo.png" alt="Edhellond"></a>
-      <nav style="display:flex; align-items:center;">
-        <button class="menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <nav class="top-nav">
+        <div class="desk-nav">
+          <a href="/services.html">Services</a>
+          <a href="/creators.html">Creators</a>
+          <a href="/how.html">How we work</a>
+          <a href="/about.html">About us</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/faq.html" aria-current="page">FAQs</a>
+        </div>
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="content">
     <section class="page">
       <div class="container">
         <h1>FAQs</h1>
@@ -64,7 +74,7 @@
   <script>
     (function(){
       var menu=document.querySelector('.side-menu'),bd=document.querySelector('.backdrop'),btn=document.querySelector('.menu-btn'),pinned=false,t;
-      function set(o){menu.classList.toggle('open',o);bd.classList.toggle('open',o&&pinned);}
+      function set(o){menu.classList.toggle('open',o);bd.classList.toggle('open',o&&pinned);if(btn)btn.setAttribute('aria-expanded',o?'true':'false');}
       function enter(){clearTimeout(t);if(!pinned)set(true);}
       function leave(){if(pinned)return;t=setTimeout(function(){set(false);},250);}
       window.toggleMenu=function(o){pinned=!!o;set(!!o);};

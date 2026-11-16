@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&text=J&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=17">
+  <link rel="stylesheet" href="/styles.css?v=18">
   <link rel="canonical" href="https://edhellond.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Edhellond">
@@ -25,19 +25,29 @@
   <meta name="twitter:description" content="Campaigns that move people. Projects that actually ship. edhellond studio grows brands and creators and builds websites for local businesses.">
   <meta name="twitter:image" content="https://edhellond.com/assets/share.png">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "edhellond studio", "alternateName": "edhellond", "url": "https://edhellond.com", "logo": "https://edhellond.com/assets/logo.png", "email": "hello@edhellond.com", "sameAs": ["https://x.com/edhellondstudio", "https://instagram.com/edhellond.studio"]}</script>
+<script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
 <!--email_off-->
+  <a class="skip" href="#content">Skip to content</a>
   <header>
-    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+    <div class="container header-bar">
       <a href="/" class="logo"><img src="/assets/logo.png" alt="Edhellond"></a>
-      <nav style="display:flex; align-items:center;">
-        <button class="menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <nav class="top-nav">
+        <div class="desk-nav">
+          <a href="/services.html">Services</a>
+          <a href="/creators.html">Creators</a>
+          <a href="/how.html">How we work</a>
+          <a href="/about.html">About us</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/faq.html">FAQs</a>
+        </div>
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="content">
     <section class="hero">
       <div class="container">
         <span class="eyebrow">Campaigns &middot; Creators &middot; Projects</span>
@@ -115,7 +125,7 @@
           <span class="chap">03 / Contact</span>
           <h2>Got an idea? Let's make it real.</h2>
           <p style="margin-bottom:32px; color:var(--muted);">Tell us what you're working on. We'll reply with a clear next step.</p>
-          <a href="mailto:hello@edhellond.com" class="btn">Start a project</a>
+          <a href="mailto:hello@edhellond.com" class="btn">Email us</a>
           <p style="margin-top:24px; font-size:0.9rem; color:var(--muted);">or hello@edhellond.com</p>
           <div class="social"><a href="https://instagram.com/edhellond.studio" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="0.6" fill="currentColor"/></svg></a><a href="https://x.com/edhellondstudio" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3zm-1.08 16.2h1.7L7.4 4.73H5.58L16.67 19.2z"/></svg></a></div>
         </div>
@@ -142,7 +152,7 @@
   <script>
     (function(){
       var menu=document.querySelector('.side-menu'),bd=document.querySelector('.backdrop'),btn=document.querySelector('.menu-btn'),pinned=false,t;
-      function set(o){menu.classList.toggle('open',o);bd.classList.toggle('open',o&&pinned);}
+      function set(o){menu.classList.toggle('open',o);bd.classList.toggle('open',o&&pinned);if(btn)btn.setAttribute('aria-expanded',o?'true':'false');}
       function enter(){clearTimeout(t);if(!pinned)set(true);}
       function leave(){if(pinned)return;t=setTimeout(function(){set(false);},250);}
       window.toggleMenu=function(o){pinned=!!o;set(!!o);};
